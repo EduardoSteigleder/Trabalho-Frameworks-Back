@@ -1,0 +1,20 @@
+CREATE DATABASE estoque;
+USE estoque;
+
+CREATE TABLE produtos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    descricao TEXT,
+    preco DECIMAL(10, 2),
+    quantidade INT
+);
+
+CREATE TABLE movimentacoes (
+  id int NOT NULL AUTO_INCREMENT,
+  produto_id int NOT NULL,
+  tipo varchar(20) DEFAULT NULL,
+  quantidade int DEFAULT NULL,
+  descricao text,
+  data datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
